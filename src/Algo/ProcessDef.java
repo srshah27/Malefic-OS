@@ -17,7 +17,7 @@ public class ProcessDef {
         this.pid = pid;
         this.at = at;
         this.bt = bt;
-        rt = bt;
+        rtl = bt;
     }
     public int pid;
     public int at;
@@ -25,8 +25,8 @@ public class ProcessDef {
     public int ct;
     public int tat;
     public int wt;
-    public int rt;
-    public boolean cmp;
-    public static ProcessDef pd[] = new ProcessDef[10];
+    public int rtl;
+    public boolean cmp = false;
     public static int currtime = 0;
+    public static ProcessDef pd[] = new ProcessDef[10];
 }
