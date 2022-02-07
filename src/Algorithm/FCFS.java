@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Algo;
+package Algorithm;
 
-import static Algo.ProcessDef.pd;
+import static Algorithm.ProcessDef.pd;
 import java.util.*;
 import GUI.Input;
 import GUI.Input;
@@ -20,6 +20,12 @@ public class FCFS {
         ProcessDef.currtime = pd[0].at;
         selector();
         Gannt.ChartPrint();
+        SetValues.CalcAverage();
+        SetValues.TableSetter();
+    }
+    
+    public static void updateTable(){
+
     }
 
     public static void arrange() {

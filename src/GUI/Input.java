@@ -8,8 +8,8 @@ package GUI;
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-import static Algo.ProcessDef.pd;
-import Algo.ProcessDef;
+import static Algorithm.ProcessDef.pd;
+import Algorithm.ProcessDef;
 import javax.swing.table.DefaultTableModel;
 /**
  *
@@ -28,6 +28,7 @@ public class Input extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         int id;
     }
+    public static DefaultTableModel model = (DefaultTableModel) MainFrame.jTable1.getModel();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -131,9 +132,8 @@ public class Input extends javax.swing.JFrame {
         int bt = Integer.parseInt(txtBurstTime.getText());
         pd[nprcs]= new ProcessDef(at, bt, nprcs);
         
-        DefaultTableModel model = (DefaultTableModel) MainFrame.jTable1.getModel();
-        model.addRow(new Object[]{"P"+nprcs, at, bt,});
         
+        model.addRow(new Object[]{"P"+nprcs, at, bt,});
         nprcs++;
         txtArrivalTime.setText("");
         txtBurstTime.setText("");

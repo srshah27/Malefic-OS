@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Algo;
+package Algorithm;
 
 import GUI.GanntBlock;
 import GUI.Input;
@@ -25,14 +25,14 @@ public class Gannt {
         block.end_time = ProcessDef.currtime + run_time;
         run.rtl = run.rtl - run_time;
         Chart.add(block);
+        ProcessDef.currtime = ProcessDef.currtime + run_time;
+
         if (run.rtl == 0 && run.cmp == false) {
             run.cmp = true;
             run.ct = ProcessDef.currtime;
         }
 
 //      System.out.println(block.end_time);
-        ProcessDef.currtime = ProcessDef.currtime + run_time;
-
         return run;
     }
 
