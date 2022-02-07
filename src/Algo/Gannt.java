@@ -49,7 +49,7 @@ public class Gannt {
         for (i = 0; i < Chart.size(); i++) {
             temp = Chart.get(i);
             GanntBlock frame = new GanntBlock();
-            frame.setBounds(20 + (i * 100), 20, 100, 100);
+            frame.setBounds(20 + (i * 102), 20, 100, 100);
             frame.Chart_ST.setText(Integer.toString(temp.start_time));
             frame.Chart_ET.setText(Integer.toString(temp.end_time));
             frame.Chart_ID.setText("P" + Integer.toString(temp.id));

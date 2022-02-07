@@ -133,6 +133,7 @@ public class Input extends javax.swing.JFrame {
         
         DefaultTableModel model = (DefaultTableModel) MainFrame.jTable1.getModel();
         model.addRow(new Object[]{"P"+nprcs, at, bt,});
+        
         nprcs++;
         txtArrivalTime.setText("");
         txtBurstTime.setText("");

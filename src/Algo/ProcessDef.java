@@ -26,6 +26,7 @@ public class ProcessDef {
     public int tat;
     public int wt;
     public int rtl;
+    public int prt;
     public boolean cmp = false;
     public static int currtime = 0;
     public static ProcessDef pd[] = new ProcessDef[10];
