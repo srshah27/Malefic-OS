@@ -10,7 +10,6 @@ import static Algo.FCFS.initfcfs;
  */
 /**
  *
- * @author RSSH
  */
 public class MainFrame extends javax.swing.JFrame {
 
