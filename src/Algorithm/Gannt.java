@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Gannt {
 
     int start_time, end_time, id;
-    static ArrayList<Gannt> Chart = new ArrayList<Gannt>();
+    public static ArrayList<Gannt> Chart = new ArrayList<Gannt>();
 
     public static ProcessDef runner(ProcessDef run, int run_time) {
         Gannt block = new Gannt();
@@ -52,7 +52,10 @@ public class Gannt {
             frame.setBounds(20 + (i * 102), 20, 100, 100);
             frame.Chart_ST.setText(Integer.toString(temp.start_time));
             frame.Chart_ET.setText(Integer.toString(temp.end_time));
-            frame.Chart_ID.setText("P" + Integer.toString(temp.id));
+            if(temp.id == -1)
+                frame.Chart_ID.setText("IDLE");
+            else
+                frame.Chart_ID.setText("P" + Integer.toString(temp.id));
             GUI.MainFrame.jPanel2.add(frame);
             GUI.MainFrame.jPanel2.revalidate();
             GUI.MainFrame.jPanel2.repaint();

@@ -17,14 +17,21 @@ public class FCFS {
 
     public static void initfcfs() {
         arrange();
-        ProcessDef.currtime = pd[0].at;
+        if (ProcessDef.currtime < pd[0].at) {
+            Gannt block = new Gannt();
+            block.start_time = ProcessDef.currtime;
+            block.end_time = pd[0].at;
+            block.id = -1;
+            Gannt.Chart.add(block);
+            ProcessDef.currtime = pd[0].at;
+        }
         selector();
         Gannt.ChartPrint();
         SetValues.CalcAverage();
         SetValues.TableSetter();
     }
-    
-    public static void updateTable(){
+
+    public static void updateTable() {
 
     }
 
