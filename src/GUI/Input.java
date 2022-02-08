@@ -19,7 +19,7 @@ public class Input extends javax.swing.JFrame {
 
     
     
-    public static int nprcs = 0;
+    public static int nPrcs = 0;
     /**
      * Creates new form Input
      */
@@ -130,11 +130,11 @@ public class Input extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         int at = Integer.parseInt(txtArrivalTime.getText());
         int bt = Integer.parseInt(txtBurstTime.getText());
-        pd[nprcs]= new ProcessDef(at, bt, nprcs);
+        pd[nPrcs]= new ProcessDef(at, bt, nPrcs);
         
         
-        model.addRow(new Object[]{"P"+nprcs, at, bt,});
-        nprcs++;
+        model.addRow(new Object[]{"P"+nPrcs, at, bt,});
+        nPrcs++;
         txtArrivalTime.setText("");
         txtBurstTime.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed

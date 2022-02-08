@@ -19,20 +19,20 @@ public class SetValues {
     public static void CalcAverage() {
         int i;
 
-        for (i = 0; i < Input.nprcs; i++) {
+        for (i = 0; i < Input.nPrcs; i++) {
             pd[i].tat = pd[i].ct - pd[i].at;
             pd[i].wt = pd[i].tat - pd[i].bt;
             totTAT = totTAT + pd[i].tat;
             totWT = totWT + pd[i].wt;
         }
 
-        AvgTAT = totTAT / (double) (GUI.Input.nprcs);
-        AvgWT = totWT / (double) GUI.Input.nprcs;
+        AvgTAT = totTAT / (double) (GUI.Input.nPrcs);
+        AvgWT = totWT / (double) GUI.Input.nPrcs;
     }
 
     public static void TableSetter() {
         int i;
-        for (i = 0; i < Input.nprcs; i++) {
+        for (i = 0; i < Input.nPrcs; i++) {
             GUI.MainFrame.jTable1.getModel().setValueAt(pd[pd[i].pid].ct, i, 3);
             GUI.MainFrame.jTable1.getModel().setValueAt(pd[pd[i].pid].tat, i, 4);
             GUI.MainFrame.jTable1.getModel().setValueAt(pd[pd[i].pid].wt, i, 5);

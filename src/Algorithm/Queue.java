@@ -10,11 +10,11 @@ package Algorithm;
  */
 public class Queue {
 
-    static int front = -1, rear = -1;
+    static int front = -1, rear = -1, len = 0;
     static final int MAX = 10;
     public static ProcessDef cirque[] = new ProcessDef[MAX];
 
-    boolean isEmpty() {
+    public static boolean isEmpty() {
         if (front == -1) {
             return false;
         } else {
@@ -22,7 +22,7 @@ public class Queue {
         }
     }
 
-    boolean isFull() {
+    public static boolean isFull() {
         if ((rear + 1) % MAX == front) {
             return true;
         } else {
@@ -30,9 +30,10 @@ public class Queue {
         }
     }
 
-    void enqueue(ProcessDef n) {
+    public static void enqueue(ProcessDef n) {
         if (isFull()) {
             System.out.println("Queue Overflow");
+            return;
         } else if (rear == -1) {
             rear = 0;
             front = 0;
@@ -41,12 +42,14 @@ public class Queue {
             rear = (rear + 1) % MAX;
             cirque[rear] = n;
         }
+        len++;
     }
 
-    ProcessDef dequeue() {
+    public static ProcessDef dequeue() {
         ProcessDef num = null;
         if (isEmpty()) {
             System.out.println("Queue Underflow");
+            return null;
         } else if (front == rear) {
             num = cirque[front];
             front = rear = -1;
@@ -54,6 +57,7 @@ public class Queue {
             num = cirque[front];
             front = (front + 1) % MAX;
         }
+        len--;
         return num;
     }
 }
